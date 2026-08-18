@@ -1,15 +1,15 @@
 # Spinal Injury Support Group Website
 
-> 🚀 This project is hosted at [https://spinalinjurysupportmobileal.org](https://spinalinjurysupportmobileal.org).  
-> Please visit the official site for the latest information.
+> 🚀 Live website: [https://spinalinjurysupportmobileal.org](https://spinalinjurysupportmobileal.org)  
+> Visit the official site for current meeting information, events, and community resources.
 
-An accessibility-focused website created to support the Spinal Injury Support Group in Mobile, Alabama.
+An accessibility-focused website developed for the Spinal Injury Support Group in Mobile, Alabama. The project combines front-end web development, website administration, DNS configuration, accessibility improvements, local SEO, and ongoing content management.
 
 ## Project Purpose
 
-The purpose of this website is to make support-group information and local resources easier to find online.
+The website was created to make support-group information, local resources, events, and contact information easier to find online.
 
-The site was designed with accessibility, readability, simple navigation, and mobile usability in mind.
+The site emphasizes accessibility, readability, simple navigation, mobile usability, and clear organization for visitors seeking spinal injury support resources.
 
 ## Features
 
@@ -18,8 +18,8 @@ The site was designed with accessibility, readability, simple navigation, and mo
 * Community and disability resources
 * Photo gallery
 * Contact and location information
-* Mobile-friendly layout
-* Accessible headings and image alt text
+* Mobile-responsive layout
+* Accessible headings and descriptive image alt text
 * Search engine optimization
 * Structured metadata
 * Secure HTTPS access
@@ -39,7 +39,7 @@ The site was designed with accessibility, readability, simple navigation, and mo
 
 ## Domain and DNS
 
-The website uses a custom domain and was configured with DNS records through Network Solutions and Cloudflare.
+The website uses a custom domain with DNS and domain services configured through Network Solutions and Cloudflare.
 
 Configuration included:
 
@@ -52,12 +52,12 @@ Configuration included:
 
 ## Accessibility
 
-Accessibility was an important part of the project.
+Accessibility was a core part of the project.
 
 The website includes:
 
 * Descriptive image alt text
-* Clear heading structure
+* Clear heading hierarchy
 * Readable page layouts
 * Simple navigation
 * Mobile-responsive design
@@ -77,22 +77,22 @@ SEO improvements include:
 
 ## Hosting
 
-The website is hosted using GitHub Pages and uses Cloudflare for DNS management, security, and HTTPS configuration.
+The website is hosted with GitHub Pages and uses Cloudflare for DNS management, HTTPS configuration, and security-related services.
 
 ## Project Background
 
-This website was created as a volunteer project to support a local spinal injury community and improve access to meeting information, resources, and events.
+This website was created as a volunteer project to support the local spinal injury community and improve access to meeting information, community resources, and events.
 
-The project involved both front-end web development and website administration, including domain configuration, DNS management, accessibility improvements, SEO, and ongoing content updates.
+My work included front-end development, accessibility improvements, domain and DNS configuration, SSL/HTTPS setup, local SEO, structured metadata, search-engine indexing, content updates, and ongoing website administration.
 
-## Future Improvements
+## Ongoing Improvements
 
 * Expand the community resource directory
-* Add additional accessibility enhancements
-* Continue improving local SEO
+* Continue accessibility enhancements
+* Improve local SEO
 * Add new event and gallery content
-* Improve performance and page-load times
-* Add additional structured data where appropriate
+* Improve page-load performance
+* Add structured data where appropriate
 
 ## Author
 
@@ -103,4 +103,4 @@ Digital Forensics Concentration
 Minor in Computer Information Systems  
 University of South Alabama
 
-Information Technology professional with experience in web development, accessibility, DNS configuration, SEO, and website administration.
+Information Technology professional with hands-on experience in web development, accessibility, DNS configuration, SEO, website administration, and technical support.
