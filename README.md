@@ -98,4 +98,9 @@ The project involved both front-end web development and website administration, 
 
 **Todd Stringfellow**
 
+B.S. Information Technology  
+Digital Forensics Concentration  
+Minor in Computer Information Systems  
+University of South Alabama
+
 Information Technology professional with experience in web development, accessibility, DNS configuration, SEO, and website administration.
