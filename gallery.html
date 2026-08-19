@@ -658,47 +658,9 @@
     </p>
   </footer>
 
-  <!-- Shared Modal -->
-  <!-- Modal container for enlarged image viewing -->
-  <div id="imgModal" class="modal" aria-hidden="true" role="dialog" aria-label="Image preview">
-    <span class="modal-close" id="modalClose" aria-label="Close">&times;</span>
-    <img class="modal-content" id="modalImg" alt="Enlarged view" />
-  </div>
-
-  <script>
-    // Open on click (only for pages that opt‑in with .use‑modal on body)
-    const modal = document.getElementById('imgModal');
-    const modalImg = document.getElementById('modalImg');
-    const closeBtn = document.getElementById('modalClose');
-
-    document.querySelectorAll('.use-modal .image-card img, .use-modal .image-frame img')
-      .forEach(img => {
-        img.addEventListener('click', () => {
-          modal.style.display = 'block';
-          modalImg.src = img.currentSrc || img.src;
-          modalImg.alt = img.alt || 'Enlarged view';
-          modal.setAttribute('aria-hidden', 'false');
-        });
-      });
-
-    function closeModal() {
-      modal.style.display = 'none';
-      modalImg.removeAttribute('src');
-      modal.setAttribute('aria-hidden', 'true');
-    }
-    closeBtn.addEventListener('click', closeModal);
-    window.addEventListener('click', e => { if (e.target === modal) closeModal(); });
-    window.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
-
-    // Auto-highlight current page in the nav
-    document.querySelectorAll('.navigation a').forEach(a => {
-      const href = a.getAttribute('href');
-      if (href && location.pathname.endsWith(href)) {
-        a.setAttribute('aria-current', 'page');
-      }
-    });
-  </script>
-  <!-- End of modal and auto-nav script -->
+ <!-- External JavaScript for image modal -->
+<script src="script.js"></script>
+  
 </body>
 </html>
 
