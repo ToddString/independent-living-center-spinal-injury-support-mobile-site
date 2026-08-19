@@ -386,51 +386,17 @@
       <a href="mailto:cyneriaa@ilcmobile.org">Cyneria Austin</a> &nbsp;•&nbsp;
       <a href="mailto:cyneriaa@ilcmobile.org">cyneriaa@ilcmobile.org</a>
     </p>
-  </footer>
+</footer>
 
-  <!-- Modal (uses styles already in styles.css) -->
-  <div id="imgModal" class="modal" aria-hidden="true" role="dialog" aria-label="Image preview">
-    <!-- Modal container for image viewer -->
-    <span class="modal-close" id="modalClose" aria-label="Close image">&times;</span>
-    <img class="modal-content" id="modalImg" alt="Expanded view" />
-  </div>
+<!-- Image Modal -->
+<div id="imgModal" class="modal" aria-hidden="true" role="dialog" aria-label="Image preview">
+  <span class="modal-close" id="modalClose" aria-label="Close image">&times;</span>
+  <img class="modal-content" id="modalImg" alt="Expanded view" />
+</div>
 
-  <script>
-    // Simple modal for gallery images (uses .use-modal to signal intent)
-    (function () {
-      const modal = document.getElementById('imgModal');
-      const modalImg = document.getElementById('modalImg');
-      const closeBtn = document.getElementById('modalClose');
+<!-- External JavaScript for image modal -->
+<script src="script.js"></script>
 
-      // Click-to-open on any image inside .image-card (within this page)
-      document.querySelectorAll('.gallery-grid .image-card img').forEach(img => {
-        img.addEventListener('click', () => {
-          modal.style.display = 'block';
-          modalImg.src = img.currentSrc || img.src;
-          modalImg.alt = img.alt || 'Expanded view';
-          modal.setAttribute('aria-hidden', 'false');
-        });
-      });
-
-      function closeModal() {
-        modal.style.display = 'none';
-        modalImg.removeAttribute('src');
-        modal.setAttribute('aria-hidden', 'true');
-      }
-
-      closeBtn.addEventListener('click', closeModal);
-      window.addEventListener('click', e => { if (e.target === modal) closeModal(); });
-      window.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
-
-      // Auto-highlight current page in nav (in case server doesn’t add aria-current)
-      document.querySelectorAll('.navigation a').forEach(a => {
-        const href = a.getAttribute('href');
-        if (href && location.pathname.endsWith(href)) {
-          a.setAttribute('aria-current', 'page');
-        }
-      });
-    })();
-  </script>
 </body>
 </html>
 
