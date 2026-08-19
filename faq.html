@@ -125,28 +125,8 @@
 </script>
 
 
-  <!-- Open FAQ item when visiting a #hash -->
-  <!-- JavaScript to expand a specific FAQ when linked via hash (#) -->
-  <script>
-    function openFAQfromHash(){
-      const id = decodeURIComponent(location.hash.slice(1));
-      if(!id) return;
-      const el = document.getElementById(id);
-      if(el && el.tagName.toLowerCase() === 'details'){
-        el.setAttribute('open','');
-        const sum = el.querySelector('summary');
-        if (sum) sum.focus({preventScroll:true});
-        el.scrollIntoView({behavior:'smooth', block:'start'});
-      }
-    }
-    window.addEventListener('DOMContentLoaded', openFAQfromHash);
-    window.addEventListener('hashchange', openFAQfromHash);
-  </script>
-
-  <!-- Site styles -->
-  <link rel="stylesheet" href="styles.css?v=34">
-  <!-- External CSS stylesheet linking -->
-</head>
+<!-- Shared site JavaScript -->
+<script src="script.js"></script>
 
 <body>
   <main class="container faq-list">
