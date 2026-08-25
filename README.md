@@ -14,6 +14,7 @@ The site emphasizes accessibility, readability, simple navigation, mobile usabil
 ## Features
 
 * Support group meeting information
+* Homepage-linked support group flyer with a QR code for quick access to online information
 * Event schedule and announcements
 * Community and disability resources
 * Photo gallery
@@ -84,6 +85,11 @@ The website is hosted with GitHub Pages and uses Cloudflare for DNS management, 
 This website was created as a volunteer project to support the local spinal injury community and improve access to meeting information, community resources, and events.
 
 My work included front-end development, accessibility improvements, domain and DNS configuration, SSL/HTTPS setup, local SEO, structured metadata, search-engine indexing, content updates, and ongoing website administration.
+
+## Recent Update
+
+* Updated the support group flyer linked from the homepage.
+* Added a QR code to the flyer to make the group's online information easier to access from printed or shared copies.
 
 ## Ongoing Improvements
 
