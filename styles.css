@@ -39,14 +39,12 @@ img, iframe, video {
    ========================================================= */
 .container {
   max-width: 900px;
-  margin: 0 auto 60px auto;  /* added 60px bottom margin for consistent spacing before footer */
+  margin: 0 auto 60px auto;
   background: #EBF3FD;
-  padding: 30px 30px 50px;  /* keep the space INSIDE the light panel */
+  padding: 30px 30px 50px;
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0,0,0,.1);
-
 }
-
 
 /* =========================================================
    FOOTER
@@ -132,8 +130,8 @@ img, iframe, video {
    HEADINGS & LOGO
    ========================================================= */
 .logo img{
-  display: block;      /* block element */
-  margin: 0 auto;      /* centers the image */
+  display: block;
+  margin: 0 auto;
   width: 150px;
   height: 150px;
   border-radius: 5px;
@@ -160,11 +158,9 @@ h3, h4, h5, h6 { color: #000; margin-top: 1.5rem; margin-bottom: .75rem; }
   border: 1px solid #000;
   padding: 10px 15px;
   box-shadow: 0 2px 4px rgba(0,0,0,.1);
-  margin-left: -1px; /* Prevent double borders between items */
+  margin-left: -1px;
 }
-.navigation li:first-child {
-  margin-left: 0; /* No negative margin for first item */
-}
+.navigation li:first-child { margin-left: 0; }
 .navigation li:not(:last-child) { border-right: 1px solid #000; }
 .navigation a {
   text-decoration: none;
@@ -175,13 +171,13 @@ h3, h4, h5, h6 { color: #000; margin-top: 1.5rem; margin-bottom: .75rem; }
 .navigation a:hover { color: #ee0a0a; }
 .navigation a[aria-current="page"] { text-decoration: underline; }
 
-/* focus ring */
 .navigation a:focus-visible,
 .site-footer a:focus-visible {
   outline: 3px solid #0d4bf7;
   outline-offset: 2px;
   border-radius: 4px;
 }
+
 /* =========================================================
    CONTENT CARDS
    ========================================================= */
@@ -222,7 +218,6 @@ h3, h4, h5, h6 { color: #000; margin-top: 1.5rem; margin-bottom: .75rem; }
   text-decoration: underline;
 }
 
-
 /* =========================================================
    IMAGES & GALLERIES
    ========================================================= */
@@ -238,7 +233,7 @@ h3, h4, h5, h6 { color: #000; margin-top: 1.5rem; margin-bottom: .75rem; }
   width: 100%;
   height: auto;
   border-radius: 5px;
-  cursor: pointer;                    /* for modal-enabled pages */
+  cursor: pointer;
 }
 .no-modal .image-card img { cursor: default; }
 
@@ -281,7 +276,7 @@ h3, h4, h5, h6 { color: #000; margin-top: 1.5rem; margin-bottom: .75rem; }
 }
 @keyframes zoom {
   from { transform: scale(0.7); opacity: 0; }
-  to   { transform: scale(1);   opacity: 1; }
+  to   { transform: scale(1); opacity: 1; }
 }
 .modal-close {
   position: absolute; top: 20px; right: 35px;
@@ -293,18 +288,15 @@ h3, h4, h5, h6 { color: #000; margin-top: 1.5rem; margin-bottom: .75rem; }
 .gallery-title { font-size: 18px; color: #000; margin-top: 20px; }
 .gallery-description { font-size: 16px; color: #000; margin-bottom: 20px; }
 
-/* Make the gallery truly responsive on phones */
-/* Gallery grid — 3 per row on large screens */
 .gallery-grid {
   width: 100%;
   display: grid;
   gap: 20px;
-  grid-template-columns: repeat(3, 1fr);  /* exactly 3 columns */
+  grid-template-columns: repeat(3, 1fr);
   margin: 30px auto 0;
   max-width: 1000px;
 }
 
-/* Let captions wrap and keep cards contained */
 .gallery-grid .image-card {
   margin: 0;
   max-width: 100%;
@@ -318,14 +310,6 @@ h3, h4, h5, h6 { color: #000; margin-top: 1.5rem; margin-bottom: .75rem; }
   margin: 2rem auto;
   justify-self: center;
   text-align: center;
-}
-
-.gallery-grid .featured-photo img {
-  width: 100%;
-  height: auto;
-  display: block;
-  margin: 0 auto;
-  object-fit: contain;
 }
 
 .image-caption {
@@ -342,7 +326,15 @@ h3, h4, h5, h6 { color: #000; margin-top: 1.5rem; margin-bottom: .75rem; }
   border-radius: 5px;
 }
 
-/* Responsive: stack to 2 then 1 on narrow screens */
+/* Featured image override must come after thumbnail rules */
+.gallery-grid .image-card.featured-photo img {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  object-fit: contain;
+}
+
 @media (max-width: 900px) {
   .gallery-grid {
     grid-template-columns: repeat(2, 1fr);
@@ -360,13 +352,13 @@ h3, h4, h5, h6 { color: #000; margin-top: 1.5rem; margin-bottom: .75rem; }
 .map-wrap {
   margin: 20px 0;
   border-radius: 6px;
-  overflow: hidden;               /* clips the iframe corners */
+  overflow: hidden;
   box-shadow: 0 2px 4px rgba(0,0,0,.1);
 }
 .map-wrap iframe {
   display: block;
   width: 100%;
-  aspect-ratio: 16 / 9;           /* responsive height */
+  aspect-ratio: 16 / 9;
   border: 0;
 }
 
@@ -413,7 +405,6 @@ h3, h4, h5, h6 { color: #000; margin-top: 1.5rem; margin-bottom: .75rem; }
 /* =========================================================
    RESOURCES PAGE — CONTENT LISTS ONLY (SCOPED)
    ========================================================= */
-/* Style UL/LI/A inside content areas, NOT the top nav */
 .resources :where(section, .card-box, .banner-strip, .banner-alert) ul {
   list-style: none !important;
   text-align: left;
@@ -438,7 +429,6 @@ h3, h4, h5, h6 { color: #000; margin-top: 1.5rem; margin-bottom: .75rem; }
   text-decoration: underline;
 }
 
-/* Additional specific rule for resources page lists */
 .resources ul {
   list-style: none !important;
   padding-left: 0 !important;
@@ -449,7 +439,6 @@ h3, h4, h5, h6 { color: #000; margin-top: 1.5rem; margin-bottom: .75rem; }
   text-align: left;
 }
 
-/* Make sure the Resources page NAV matches other pages */
 .resources nav.navigation ul {
   list-style: none;
   padding: 0;
@@ -466,10 +455,9 @@ h3, h4, h5, h6 { color: #000; margin-top: 1.5rem; margin-bottom: .75rem; }
    ========================================================= */
 @media (max-width: 600px) {
   .container {
-    padding: 15px 15px 50px;  /* keep the bottom space inside */
-    margin: 0 12px 60px 12px;         /* added 60px bottom margin for consistent spacing before footer */
+    padding: 15px 15px 50px;
+    margin: 0 12px 60px 12px;
   }
-  /* full-width stacked nav, big tap targets */
   .navigation ul {
     flex-direction: column;
     align-items: stretch;
@@ -486,8 +474,7 @@ h3, h4, h5, h6 { color: #000; margin-top: 1.5rem; margin-bottom: .75rem; }
   }
   .navigation li:not(:last-child) { border-bottom: 1px solid #000; }
   .navigation a {
-    display: block;                   /* entire row is clickable */
+    display: block;
     padding: 12px 16px;
   }
-  
 }
