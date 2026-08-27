@@ -90,7 +90,7 @@
       "inLanguage": "en-US"
     },
 
-
+    /* ---- Example events featured on the page ---- */
     {
       "@type": "Event",
       "@id": "https://spinalinjurysupportmobileal.org/#p4p-2025-08-11",
@@ -182,7 +182,7 @@
     <nav class="navigation" aria-label="Primary">
       <!-- Primary site navigation -->
       <ul>
-        <li><a href="/">Home</a></li>
+        <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="contact.html">Contact</a></li>
         <li><a href="gallery.html">Gallery</a></li>
@@ -203,39 +203,20 @@
          legislators—or figure out how to stand up for your rights in everyday life.</p>
       <!-- Program overview paragraph -->
 
-  <p>
-  Whether you’re newly injured or years into your journey, you’ll find encouragement, accountability, and a community
-  that is understanding of your disability. To learn more, please see our
-  <a href="contact.html">Contact</a> page or talk with our coordinator,
-  Brian Johnson, at the next meeting.
-</p>
-
-<p>
-  <strong>
-    People 4 People group meets on the second Monday of every month at 11:00 AM - 12:00 PM.
-    Please call to confirm the date, as we occasionally change the date due to holidays or speaker availability.
-    <br><br>
-    PEOPLE 4 PEOPLE WILL NOT MEET IN THE MONTH OF NOVEMBER 2025!!!
-    <br><br>
-    THE NEXT MEETING WILL BE HELD ON: December 8th, 2025 for the annual Christmas holiday party.
-  </strong>
-</p>   
+      <p>Whether you’re newly injured or years into your journey, you’ll find encouragement, accountability, and a community 
+          that is understanding of your disability. To learn more, please see our <a href="contact.html">Contact</a> page or talk with our coordinator, 
+          Brian Johnson, at the next meeting.<br />
+          <p><strong>People 4 People group meets on the second Monday of every month at 11:00 AM - 12:00 PM. Please call to confirm the date,<br>
+          as we occasionally change the date due to holidays or speaker availability.<br>
+          <br>
+          PEOPLE 4 PEOPLE WILL NOT MEET IN THE MONTH OF NOVEMBER 2025!!!<br>
+          <br>
+          THE NEXT MEETING WILL BE HELD ON: December 8th, 2025 for the annual Christmas holiday party.</strong>
+          </p>
+    
       <!-- Continuation with contact reference -->
     </section>
-        <h2>People 4 People agenda: Our guest speaker, Ms. Allen of Alabama Arise, outlined current state and federal policy priorities
-      aimed at improving outcomes for low-income Alabamians through dignity, equity, and justice, and discussed ways our members can
-       get involved. — 9/08/2025</h2>
-    <!-- Event heading -->
-
-    <div class="gallery-grid">
-      <!-- Image gallery grid -->
-      <div class="image-card">
-        <img src="p4p9825-0.jpg" alt="Members gather as Ms. Allen from Alabama Arise prepares to brief the group on state and federal policies that impact low-income Alabamians." loading="lazy" decoding="async" />
-        <p class="image-caption">Members gather as Ms. Allen from Alabama Arise prepares to brief the group on state and federal policies that impact low-income Alabamians.</p>
-      </div>
-    </div>>
-    
-        <h2>People 4 People agenda: The group discussed different forms of advocacy, including advocating for ourselves, with or for others, and working toward systemic change.
+     <h2>People 4 People agenda: The group discussed different forms of advocacy, including advocating for ourselves, with or for others, and working toward systemic change.
           The meeting also covered legislative advocacy, ways to strengthen influence with lawmakers, and concerns about how H.R. 1 of the OBBBA could affect Medicaid, SNAP, and Affordable Care Act tax credits, 
           along with rising gas and food costs.<br>
           The group also reviewed the upcoming Arise Annual Meeting on September 26, 2026, discussed candidates running for Congress in Alabama’s 1st Congressional District, including Clyde Jones and Jerry Carl, 
@@ -249,8 +230,18 @@
     <p class="image-caption">Group members at the August 12,2026 meeting with guest speaker Bernadette Allen of Alabama Arise.</p>
   </div>
 </div>
- 
-    <div class="image-card">
+
+        <h2>People 4 People agenda: Began with a Call to Order along with an Introduction to Business by Brian Johnson and closed with a movie regarding how to live and cope with disability. — 10/13/2025</h2>
+    <!-- Event heading -->
+
+<div class="gallery-grid">
+  <!-- Speaker photos first -->
+  <div class="image-card">
+    <img src="20251013_p4p4.jpg" alt="Ms. Claudia cooking and preparing popcorn for the group." loading="lazy" decoding="async" />
+    <p class="image-caption">Ms. Claudia cooking and preparing popcorn for the group.</p>
+  </div>
+
+  <div class="image-card">
     <img src="20251013_p4p1.jpg" alt="The discussion begins with an empowering message on inclusion and self-advocacy within the community from Mr. Brian Johnson." loading="lazy" decoding="async" />
     <p class="image-caption">The discussion begins with an empowering message on inclusion and self-advocacy within the community from Mr. Brian Johnson.</p>
   </div>
@@ -409,19 +400,54 @@
       <a href="mailto:cyneriaa@ilcmobile.org">Cyneria Austin</a> &nbsp;•&nbsp;
       <a href="mailto:cyneriaa@ilcmobile.org">cyneriaa@ilcmobile.org</a>
     </p>
-</footer>
+  </footer>
 
-<!-- Image Modal -->
-<div id="imgModal" class="modal" aria-hidden="true" role="dialog" aria-label="Image preview">
-  <span class="modal-close" id="modalClose" aria-label="Close image">&times;</span>
-  <img class="modal-content" id="modalImg" alt="Expanded view" />
-</div>
+  <!-- Modal (uses styles already in styles.css) -->
+  <div id="imgModal" class="modal" aria-hidden="true" role="dialog" aria-label="Image preview">
+    <!-- Modal container for image viewer -->
+    <span class="modal-close" id="modalClose" aria-label="Close image">&times;</span>
+    <img class="modal-content" id="modalImg" alt="Expanded view" />
+  </div>
 
-<!-- External JavaScript for image modal -->
-<script src="script.js"></script>
+  <script>
+    // Simple modal for gallery images (uses .use-modal to signal intent)
+    (function () {
+      const modal = document.getElementById('imgModal');
+      const modalImg = document.getElementById('modalImg');
+      const closeBtn = document.getElementById('modalClose');
 
+      // Click-to-open on any image inside .image-card (within this page)
+      document.querySelectorAll('.gallery-grid .image-card img').forEach(img => {
+        img.addEventListener('click', () => {
+          modal.style.display = 'block';
+          modalImg.src = img.currentSrc || img.src;
+          modalImg.alt = img.alt || 'Expanded view';
+          modal.setAttribute('aria-hidden', 'false');
+        });
+      });
+
+      function closeModal() {
+        modal.style.display = 'none';
+        modalImg.removeAttribute('src');
+        modal.setAttribute('aria-hidden', 'true');
+      }
+
+      closeBtn.addEventListener('click', closeModal);
+      window.addEventListener('click', e => { if (e.target === modal) closeModal(); });
+      window.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
+
+      // Auto-highlight current page in nav (in case server doesn’t add aria-current)
+      document.querySelectorAll('.navigation a').forEach(a => {
+        const href = a.getAttribute('href');
+        if (href && location.pathname.endsWith(href)) {
+          a.setAttribute('aria-current', 'page');
+        }
+      });
+    })();
+  </script>
 </body>
 </html>
+
 
 
 
